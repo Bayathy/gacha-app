@@ -1,8 +1,9 @@
 import { Group, Header as MantineHeader, Burger, Text } from '@mantine/core'
-import { useDisclosure } from '@mantine/hooks'
+
+import { useMenu } from '@/components/ui/header/api/use-Menu'
 
 export function Header() {
-  const [open, { toggle }] = useDisclosure()
+  const { open, toggle } = useMenu()
   return (
     <MantineHeader height={64} className={'flex justify-between bg-green-300 px-4'}>
       <Group>
