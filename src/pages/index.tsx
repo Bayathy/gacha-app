@@ -1,6 +1,7 @@
-import { AppShell, Aside, Box, MediaQuery, Text } from '@mantine/core'
+import { AppShell, Box, Text } from '@mantine/core'
 
 import { useMenu } from '@/components/ui/api/use-menu'
+import { Aside } from '@/components/ui/aside'
 import { Drawer } from '@/components/ui/drawer'
 import { Header } from '@/components/ui/header'
 
@@ -13,13 +14,7 @@ export default function Home() {
         padding={'md'}
         header={<Header opened={open} toggle={toggle} />}
         asideOffsetBreakpoint='sm'
-        aside={
-          <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
-            <Aside p='md' hiddenBreakpoint='sm' width={{ sm: 200, lg: 300 }}>
-              <Text>Application sidebar</Text>
-            </Aside>
-          </MediaQuery>
-        }
+        aside={<Aside />}
       >
         <Box className={'w-full'}>
           <Text>Test</Text>
