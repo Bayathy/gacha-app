@@ -1,9 +1,5 @@
-import { Noto_Sans_JP } from 'next/font/google'
-
-const inter = Noto_Sans_JP({ subsets: ['latin'] , display:"swap"})
+import { Header } from '@/components/ui/header'
 
 export default function Home() {
-  return (
-   <p className={`${inter.className}`}>Test</p>
-  )
+  return <Header />
 }
