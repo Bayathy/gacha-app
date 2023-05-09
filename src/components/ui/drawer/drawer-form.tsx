@@ -1,7 +1,7 @@
 import { Button, Divider, FileButton, NumberInput, Stack } from '@mantine/core'
 import { useForm } from '@mantine/form'
 
-type DrawerForm = {
+export type DrawerForm = {
   peoples: {
     '1I': number
     '2I': number
