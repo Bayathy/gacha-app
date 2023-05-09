@@ -1,30 +1,9 @@
 import { Button, Divider, FileButton, NumberInput, Stack } from '@mantine/core'
-import { useForm } from '@mantine/form'
 
-export type DrawerForm = {
-  peoples: {
-    '1I': number
-    '2I': number
-    '3I': number
-    '4I': number
-    '5I': number
-  }
-  productList: Array<string>
-}
+import { useDrawerForm } from '@/components/ui/drawer/api/use-drawer-form'
 
 export function DrawerForm() {
-  const form = useForm<DrawerForm>({
-    initialValues: {
-      peoples: {
-        '1I': 1,
-        '2I': 1,
-        '3I': 1,
-        '4I': 1,
-        '5I': 1,
-      },
-      productList: [],
-    },
-  })
+  const form = useDrawerForm()
 
   return (
     <form onSubmit={form.onSubmit((data) => console.log(data))}>
