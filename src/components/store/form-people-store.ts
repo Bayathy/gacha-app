@@ -1,6 +1,6 @@
 import { atom } from 'recoil'
 
-import type { DrawerForm } from '@/components/ui/drawer/drawer-form'
+import type { DrawerForm } from '@/components/ui/drawer/api/use-drawer-form'
 
 export const formPeopleState = atom<Pick<DrawerForm, 'peoples'>>({
   key: 'Form People State',

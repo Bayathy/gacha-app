@@ -8,7 +8,7 @@ export type DrawerForm = {
     '4I': number
     '5I': number
   }
-  productList: JSON | undefined
+  productList: File | undefined
 }
 
 export const useDrawerForm = () => {
