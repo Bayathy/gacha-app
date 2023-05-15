@@ -59,7 +59,7 @@ export function Main() {
             </Button>
             <Button onClick={() => gacha()}>抽選する</Button>
             <Button
-              disabled={listIndex + 1 == productList.length}
+              disabled={listIndex + 1 == productList.length || !candidate}
               onClick={() => handleNext(listIndex, candidate)}
             >
               次へ

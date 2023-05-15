@@ -8,6 +8,11 @@ type SetFormStateProperties = {
 }
 
 export const setFormStore = ({ data, setProductList, setPeople }: SetFormStateProperties) => {
+  if (!data.productList) {
+    alert('Please Import File')
+    return
+  }
+
   setPeople({ peoples: { ...data.peoples } })
   const reader = new FileReader()
   const fileLoader = (event: ProgressEvent<FileReader>) => {
