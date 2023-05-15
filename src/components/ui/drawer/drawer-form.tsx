@@ -27,31 +27,31 @@ export function DrawerForm() {
             defaultValue={1}
             placeholder='人数を入力'
             label='1Iの人数'
-            {...form.getInputProps('peoples.1I')}
+            {...form.getInputProps('peoples.1')}
           />
           <NumberInput
             defaultValue={1}
             placeholder='人数を入力'
             label='2Iの人数'
-            {...form.getInputProps('peoples.2I')}
+            {...form.getInputProps('peoples.2')}
           />
           <NumberInput
             defaultValue={1}
             placeholder='人数を入力'
             label='3Iの人数'
-            {...form.getInputProps('peoples.3I')}
+            {...form.getInputProps('peoples.3')}
           />
           <NumberInput
             defaultValue={1}
             placeholder='人数を入力'
             label='4Iの人数'
-            {...form.getInputProps('peoples.4I')}
+            {...form.getInputProps('peoples.4')}
           />
           <NumberInput
             defaultValue={1}
             placeholder='人数を入力'
             label='5Iの人数'
-            {...form.getInputProps('peoples.5I')}
+            {...form.getInputProps('peoples.5')}
           />
         </Stack>
         <Divider my={'lg'} />

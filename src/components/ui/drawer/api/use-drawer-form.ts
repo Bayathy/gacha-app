@@ -2,11 +2,11 @@ import { useForm } from '@mantine/form'
 
 export type DrawerForm = {
   peoples: {
-    '1I': number
-    '2I': number
-    '3I': number
-    '4I': number
-    '5I': number
+    1: number
+    2: number
+    3: number
+    4: number
+    5: number
   }
   productList: File | undefined
 }
@@ -15,11 +15,11 @@ export const useDrawerForm = () => {
   return useForm<DrawerForm>({
     initialValues: {
       peoples: {
-        '1I': 1,
-        '2I': 1,
-        '3I': 1,
-        '4I': 1,
-        '5I': 1,
+        1: 1,
+        2: 1,
+        3: 1,
+        4: 1,
+        5: 1,
       },
       productList: undefined,
     },

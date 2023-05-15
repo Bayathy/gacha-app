@@ -4,7 +4,7 @@ import type { SetterOrUpdater } from 'recoil'
 type SetFormStateProperties = {
   data: DrawerForm
   setPeople: SetterOrUpdater<Pick<DrawerForm, 'peoples'>>
-  setProductList: SetterOrUpdater<Pick<DrawerForm, 'productList'>>
+  setProductList: SetterOrUpdater<Array<string>>
 }
 
 export const setFormStore = ({ data, setProductList, setPeople }: SetFormStateProperties) => {

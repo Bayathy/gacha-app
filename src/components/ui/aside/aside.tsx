@@ -1,18 +1,33 @@
-import { MediaQuery, Text, Aside as MantineAside, Divider, ScrollArea } from '@mantine/core'
-import { useRecoilState } from 'recoil'
+import {
+  MediaQuery,
+  Text,
+  Aside as MantineAside,
+  Divider,
+  ScrollArea,
+  Card,
+  Stack,
+} from '@mantine/core'
+import { useRecoilValue } from 'recoil'
 
-import { formProductListState } from '@/components/store/form-product-list-store'
+import { resultListState } from '@/components/store/result-list-store'
 export function Aside() {
-  const [productList] = useRecoilState(formProductListState)
+  const resultList = useRecoilValue(resultListState)
+
   return (
     <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
       <MantineAside p='md' hiddenBreakpoint='sm' width={{ sm: 300 }}>
         <Text ta={'center'}>履歴</Text>
-        <Divider />
+        <Divider py={'sm'} />
         <ScrollArea>
-          {productList.map((index, key) => (
-            <Text key={key}>{index}</Text>
-          ))}
+          <Stack spacing={'sm'}>
+            {resultList.length > 0 &&
+              resultList.map((index) => (
+                <Card key={index.id} withBorder>
+                  <Text>{index.product}</Text>
+                  <Text>{index.candidate}</Text>
+                </Card>
+              ))}
+          </Stack>
         </ScrollArea>
       </MantineAside>
     </MediaQuery>

@@ -6,11 +6,11 @@ export const formPeopleState = atom<Pick<DrawerForm, 'peoples'>>({
   key: 'Form People State',
   default: {
     peoples: {
-      '1I': 0,
-      '2I': 0,
-      '3I': 0,
-      '4I': 0,
-      '5I': 0,
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
     },
   },
 })
