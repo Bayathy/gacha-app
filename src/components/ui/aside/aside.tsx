@@ -6,12 +6,20 @@ import {
   ScrollArea,
   Card,
   Stack,
+  Button,
+  Box,
 } from '@mantine/core'
-import { useRecoilValue } from 'recoil'
+import { IconTrash } from '@tabler/icons-react'
+import { useRecoilState } from 'recoil'
 
 import { resultListState } from '@/components/store/result-list-store'
 export function Aside() {
-  const resultList = useRecoilValue(resultListState)
+  const [resultList, setResultList] = useRecoilState(resultListState)
+
+  const deleteResult = (id: number) => {
+    const newResultList = resultList.filter((item) => item.id != id)
+    setResultList(newResultList)
+  }
 
   return (
     <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
@@ -24,7 +32,13 @@ export function Aside() {
               resultList.map((index) => (
                 <Card key={index.id} withBorder>
                   <Text>{index.product}</Text>
+                  <Divider />
                   <Text>{index.candidate}</Text>
+                  <Box className={'flex justify-end'}>
+                    <Button onClick={() => deleteResult(index.id)} leftIcon={<IconTrash />}>
+                      削除
+                    </Button>
+                  </Box>
                 </Card>
               ))}
           </Stack>

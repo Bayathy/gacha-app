@@ -31,6 +31,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@tabler/icons-react": "^2.18.0",
     "eslint": "8.39.0",
     "eslint-config-bayathy": "^1.0.44",
     "eslint-plugin-tailwindcss": "^3.11.0",
